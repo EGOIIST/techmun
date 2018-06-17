@@ -59,20 +59,12 @@ def kmeansalgorithm():
            
         else:
             break
-    print(result_gesamt)
-        
-    
 
-       
     X = np.array(result_gesamt)
     kmeans = KMeans(n_clusters=4, random_state=0).fit(X)
-    print(kmeans.labels_)
-    kmeans.predict([24, 12, 25, 56, 23, 45, 12, 35, ])
-    array([0, 1], dtype=int32)
-    kmeans.cluster_centers_
-    array([[ 1.,  2.],
-        [ 4.,  2.]])
-
+    #print(kmeans.labels_)
+    #print(kmeans.predict([[24, 12, 25, 56, 23, 45, 12, 35, 29, 11, 40, 32, 22, 34, 1, 23, 7, 3]]))
+    return kmeans.predict([[24, 12, 25, 56, 23, 45, 12, 35, 29, 11, 40, 32, 22, 34, 1, 23, 7, 3]])[0]
 
 
 
